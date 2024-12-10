@@ -13,7 +13,7 @@ function pegarValor() {
 function mostrarNaTela(valorBtn) {
     const ultimoValor = valorBtn.length - 1
     const output = document.getElementById('saida');
-    console.log(output.value)
+    //console.log(output.value)
 
     if(valorBtn[ultimoValor] == '='){
         output.innerHTML = eval(output.innerHTML)
