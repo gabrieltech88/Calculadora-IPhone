@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --laranja-principal: #FF9F0A;
+    --preto: #000;
+    --branco: #fff;
+    --cinza-escuro: #2A2A2C;
+    --cinza-claro: #5C5C5F;
+    --fonte-titulo: "Krona One", serif;
+    --fonte-texto: "Oswald", serif;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--preto);
+    display: flex;
+    justify-content: center;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+/*CONTAINER DO OUTPUT*/
+#container-saida {
+    display: flex;
+    height: 55px;
+    width: 450px;
+    background-color: var(--branco);
+    border-radius: 36px;
+    align-items: center;
+    
+}
+
+#saida {
+    padding-left: 12px;
+    font-size: 12px;
+    color: var(--cinza-claro);
+}
+
+/*CONTAINER DE LISTA DOS BOTÕES DE NÚMEROS E OPERAÇÕES*/
+
+.item-tabela {
+    padding: 5px;
+}
+
+.btn {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border: none;
+    font-size: 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    
+}
+
+.btn-op {
+    background-color: var(--laranja-principal);
+}
+.btn-op-esp {
+    background-color: var(--cinza-claro);
+}
+
+/*CONTAINER DE TITULO E BOTÃO DE LOGOUT*/
+h1 {
+    margin-left: 5%;
+    color: var(--branco);
+    font-size: 50px;
+    font-family: var(--fonte-titulo);
+}
+
+span {
+    color: var(--laranja-principal);
+}
+
+#div-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+#container-titulo {
+    margin: 0 0;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#logout {
+    margin-left: 30%;
+    border: 2px solid var(--laranja-principal);
+    background-color: transparent;
+    color: var(--laranja-principal);
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 4px 16px;
+    transition: background-color 0.3s, color 0.3s, padding 0.3s; 
+    /* Tamanho fixo para evitar mudanças durante o hover */
+    width: 80px;  /* Ajuste conforme necessário */ 
+    height: 40px;  /* Ajuste conforme necessário */
+}
+
+#logout:hover {
+    background-color: var(--laranja-principal);
+    color: var(--branco);
+    padding: 8px 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
