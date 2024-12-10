@@ -9,7 +9,12 @@
 </head>
 <body>
     <main>
-        <h1>Calculadora <span>IP</span>hone</h1>
+        <div id="div-titulo">
+            <div id="container-titulo">
+                <h1>Calculadora <span>IP</span>hone</h1>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
         <br>
         <div id="container-saida">
             <output id="saida">
@@ -54,23 +59,25 @@
             <div id="container-lista-op">
                 <ul id="lista-op">
                     <li class="item-lista-op">
-                        <button class="btn-op btn">=</button>
+                        <button class="btn-op btn" value="=">=</button>
                     </li>
                     <li class="item-lista-op">
-                        <button class="btn-op btn">+</button>
+                        <button class="btn-op btn" value="+">+</button>
                     </li>
                     <li class="item-lista-op">
-                        <button class="btn-op btn">-</button>
+                        <button class="btn-op btn" value="-">-</button>
                     </li>
                     <li class="item-lista-op">
-                        <button class="btn-op btn">x</button>
+                        <button class="btn-op btn" value="*">x</button>
                     </li>
                     <li class="item-lista-op">
-                        <button class="btn-op btn">/</button>
+                        <button class="btn-op btn" value="/">/</button>
                     </li>
                 </ul>
             </div>
         </div>
     </main>
+
+    <script src="./src/scripts/script.js"></script>
 </body>
 </html>
