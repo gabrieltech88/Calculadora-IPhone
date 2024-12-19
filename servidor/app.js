@@ -1,13 +1,15 @@
-import express from "express";
-import path from "path";
-import url from "url";
+const rotas = require("./route/UsuarioRoutes.js");
+const express = require("express");
+const path = require("path");
+
 
 const app = express();
 
-const caminhoAtual = url.fileURLToPath(import.meta.url);
-const diretorioPublico = path.join(caminhoAtual, "../..", "client", "public");
+const caminhoAtual = __dirname;
+const diretorioPublico = path.join(caminhoAtual, "../client/public/");
+
 app.use(express.static(diretorioPublico));
+app.use(require('./route/UsuarioRoutes.js'));
 
 
-
-export default app;
+module.exports = app;
