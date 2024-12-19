@@ -40,8 +40,6 @@ function mostrarNaTela(listaValores) {
             output.innerHTML = listaValores.join('');
         }
 
-
-
     } catch(erro) {
         alert(erro, "Houve algum erro de digitiação")
     }
