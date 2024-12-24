@@ -1,4 +1,11 @@
-const btn = document.querySelectorAll(".btn");    
+import { apagar } from "./functions/apagar.js";
+import { deletar } from "./functions/deletar.js";
+import { calcular } from "./functions/calcular.js"
+
+const btn = document.querySelectorAll(".btn");  
+const ac = document.getElementById("ac");
+const del = document.getElementById("del");
+
 btn.forEach(btn => btn.addEventListener('click', pegarValor)); 
 
 let listaOperacao = []
@@ -10,32 +17,23 @@ function pegarValor() {
     
 }
 
-function apagar(output) {
-    output.innerHTML = 'Resultado';
-    return listaOperacao = [];
-}
-
 function mostrarNaTela(listaValores) {
-    console.log(listaValores.length)
     try {
         const ultimoValor = listaValores.length - 1
-        const output = document.getElementById('saida');
-        
-        if (listaValores[ultimoValor] === 'DEL'){
-            output.innerHTML = listaValores.pop('DEL');
-            output.innerHTML = listaValores.pop(ultimoValor);
-        }
-        
         const penultimoValor = listaValores.length - 2;
-        if(listaValores[ultimoValor] == '=' && listaValores[penultimoValor] == '=') {
-            apagar(output);
-            throw new Error('Tentiva de opereção irreconhecivel')
+        const output = document.getElementById('saida');
+
+        ac.onclick = () => {
+            apagar(output, listaValores);
         }
-    
+        
+        del.onclick = () => {
+            deletar(output, listaValores);
+        }
+
+
         if(listaValores[ultimoValor] == '='){
-            output.innerHTML = eval(output.innerHTML)
-        } else if (listaValores[ultimoValor] === 'AC') {
-            apagar(output);
+            calcular(output, listaValores);
         } else {
             output.innerHTML = listaValores.join('');
         }
@@ -43,5 +41,6 @@ function mostrarNaTela(listaValores) {
     } catch(erro) {
         alert(erro, "Houve algum erro de digitiação")
     }
+    console.log(listaValores);
 }
 

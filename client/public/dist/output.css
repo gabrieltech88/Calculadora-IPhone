@@ -131,7 +131,7 @@ main {
 .item-tabela {
   padding: 5px;
 }
-.item-tabela .btn {
+.item-tabela .btn, .item-tabela .btn-numero, .item-tabela .btn-op-esp, .item-tabela .btn-op {
   background-color: #2A2A2C;
   color: #fff;
   border: none;
