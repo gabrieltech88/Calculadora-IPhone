@@ -14,10 +14,15 @@
         
     }
     .btn-op {
+        @extend .btn;
         background-color: variaveis.$laranja-principal;
     }
     .btn-op-esp {
+        @extend .btn;
         background-color: variaveis.$cinza-claro;
+    }
+    .btn-numero {
+        @extend .btn;
     }
 }
 
