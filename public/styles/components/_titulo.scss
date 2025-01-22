@@ -1,0 +1,52 @@
+@use '../abstract/variaveis';
+
+#div-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    
+    #container-titulo {
+        margin: 0 0;
+        white-space: nowrap;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            margin-left: 5%;
+            color: variaveis.$branco;
+            font-size: 50px;
+            font-family: variaveis.$fonte-titulo;
+
+            span {
+                color: variaveis.$laranja-principal;
+            }
+        }
+    }
+}
+
+
+#logout {
+    margin-left: 30%;
+    border: 2px solid variaveis.$laranja-principal;
+    background-color: transparent;
+    color: variaveis.$laranja-principal;
+    font-family: variaveis.$fonte-texto
+    ;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 4px 16px;
+    transition: background-color 0.3s, color 0.3s, padding 0.3s; 
+    /* Tamanho fixo para evitar mudanças durante o hover */
+    width: 80px;  /* Ajuste conforme necessário */ 
+    height: 40px;  /* Ajuste conforme necessário */
+    
+    &:hover {
+        background-color: variaveis.$laranja-principal;
+        color: variaveis.$branco;
+        padding: 8px 14px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Calculadora IPhone</title>
+</head>
+<body>
+    <main>
+        <div id="div-titulo">
+            <div id="container-titulo">
+                <h1>Calculadora <span>IP</span>hone</h1>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
+        <br>
+        <div id="container-saida">
+            <output id="saida">
+                Resultado
+            </output>
+        </div>
+        <table id="tabela-numEOp">
+            <tr class="linha-tabela">
+                <td class="item-tabela">
+                    <button id="ac" class="btn-op-esp">AC</button>
+                </td>
+                <td class="item-tabela">
+                   <button class="btn-op-esp btn">%</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op-esp btn">()</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op btn" value="/">/</button>
+                </td>
+            </tr>
+            <tr class="linha-tabela">
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="7">7</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="8">8</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="9">9</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op btn" value="*">x</button>
+                </td>
+            </tr>
+            <tr class="linha-tabela">
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="4">4</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="5">5</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="6">6</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op btn" value="-">-</button>
+                </td>
+            </tr>
+            <tr class="linha-tabela">
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="1">1</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="2">2</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="3">3</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op btn" value="+">+</button>
+                </td>
+            </tr>
+            <tr class="linha-tabela">
+                <td class="item-tabela">
+                    <button id="del" class="btn-numero">DEL</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value="0">0</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-numero btn" value=".">,</button>
+                </td>
+                <td class="item-tabela">
+                    <button class="btn-op btn" value="=">=</button>
+                </td>
+           </tr>
+        </table>
+    </main>
+
+    <script src="./src/script.js" type="module"></script>
+</body>
+</html>
