@@ -1,4 +1,4 @@
-const db = require("../db/models/Usuario");
+const db = require("../db/models");
 const { hashearSenha } = require('../middlewares/hashearPassword');
 
 class UsuarioController {
@@ -17,7 +17,11 @@ class UsuarioController {
         const { nome, email, senha } = req.body
         const hashPassword = await hashearSenha(senha);
         try {
-            const usuario = db.Usuario.create({ nome, email, hashPassword })
+            const usuario = await db.Usuario.create({ 
+                nome, 
+                email, 
+                senha: hashPassword 
+            })
 
             return res.status(201).send(usuario);
         } catch(error) {

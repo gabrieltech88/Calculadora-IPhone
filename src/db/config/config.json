@@ -3,7 +3,7 @@
     "dialect": "mysql",
     "host": "localhost",
     "username": "root",
-    "password": "senha",
+    "password": "Gg23032006",
     "database": "calculadora_iphone",
     "port": 3306,
     "logging": false
