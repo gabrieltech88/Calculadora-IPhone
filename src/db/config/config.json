@@ -1,9 +1,9 @@
 {
   "development": {
     "dialect": "mysql",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "username": "root",
-    "password": "Gg23032006",
+    "password": "senha",
     "database": "calculadora_iphone",
     "port": 3306,
     "logging": false

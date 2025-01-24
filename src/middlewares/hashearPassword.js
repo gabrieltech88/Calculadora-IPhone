@@ -6,7 +6,7 @@ function hashearSenha(password) {
     
     const hashPassword = scryptSync(password, salt, 64).toString('hex');
 
-    return hashPassword;
+    return { salt, hashPassword };
 }
 
 module.exports = hashearSenha;
