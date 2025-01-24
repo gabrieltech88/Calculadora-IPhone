@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 const sequelize = new Sequelize('calculadora_iphone', process.env.USUARIO_DB, process.env.SENHA_DB, {
-  host: 'localhost',
+  host: '127.27.97.254',
   dialect: 'mysql',
   port: 3306
 });
@@ -15,5 +15,5 @@ async function testConnection() {
     }
 }
 
-
+testConnection()
 module.exports = { testConnection };
