@@ -55,6 +55,11 @@ table {
 }
 
 body {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
   box-sizing: border-box;
   height: 100vh;
   background-color: #000;

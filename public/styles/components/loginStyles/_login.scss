@@ -1,0 +1,6 @@
+@use '../../abstract/variaveis';
+@use '../../abstract/mixins/inputForm';
+
+.input-login {
+    @include inputForm.inputForm();
+}

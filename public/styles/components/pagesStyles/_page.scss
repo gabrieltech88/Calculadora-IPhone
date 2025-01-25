@@ -1,4 +1,5 @@
 @use '../../abstract/variaveis';
+@use '../../abstract/mixins/inputForm';
 
 body {
     background-color: variaveis.$preto;
@@ -25,23 +26,20 @@ body {
             display: flex;
             flex-direction: column;
             gap: 8px;
-            input {
-                background-color: transparent;
-                border: 3px solid variaveis.$laranja-principal;
-                width: 280px;
-                border-radius: 4px;
-                padding: 8px;
-                color: variaveis.$branco;
+            
+        }
+        
+        input {
+            @include inputForm.inputForm();
 
-                &:focus {
-                    outline: none;
-                }
+            &:focus {
+                outline: none;
             }
+        }
+        
 
-            label {
-                font-family: variaveis.$fonte-texto;
-                
-            }
+        label {
+            font-family: variaveis.$fonte-texto;
         }
 
         button {
