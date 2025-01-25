@@ -54,6 +54,11 @@ table {
 }
 
 body {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #000;
   color: #fff;
   display: flex;
@@ -78,7 +83,7 @@ body #form .container-form {
   flex-direction: column;
   gap: 8px;
 }
-body #form .container-form input {
+body #form input {
   background-color: transparent;
   border: 3px solid #FF9F0A;
   width: 280px;
@@ -86,10 +91,10 @@ body #form .container-form input {
   padding: 8px;
   color: #fff;
 }
-body #form .container-form input:focus {
+body #form input:focus {
   outline: none;
 }
-body #form .container-form label {
+body #form label {
   font-family: "Oswald", serif;
 }
 body #form button {
@@ -105,6 +110,15 @@ body a {
   color: #5C5C5F;
   text-align: center;
   font-family: "Oswald", serif;
+}
+
+.input-login {
+  background-color: transparent;
+  border: 3px solid #FF9F0A;
+  width: 280px;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=SecondOutput.css.map */

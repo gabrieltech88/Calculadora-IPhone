@@ -1,3 +1,6 @@
 @use './abstract/reset';
+@use './abstract/screen';
 
-@use './components/login&cadastro/page';
+
+@use './components/pagesStyles/page';
+@use './components/loginStyles/login';

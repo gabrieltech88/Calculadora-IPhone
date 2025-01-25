@@ -1,8 +1,9 @@
 @use './abstract/reset';
+@use './abstract/screen';
 
-@use './components/calculadora';
+@use './components/indexStyles/calculadora';
 
-@use './components/titulo';
-@use './components/saida';
-@use './components/botoes';
+@use './components/indexStyles/titulo';
+@use './components/indexStyles/saida';
+@use './components/indexStyles/botoes';
 
