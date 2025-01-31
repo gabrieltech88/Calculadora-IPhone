@@ -5,7 +5,7 @@ const { testConnection } = require('../db/config/testConnect')
 class UsuarioController {
     static async buscaTodos(req, res) {
         try {
-            console.log(req.body)
+           // 
             const listaDeUsuarios = await db.Usuario.findAll();
 			return res.status(200).json(listaDeUsuarios);
         } catch(erro) {
@@ -15,9 +15,10 @@ class UsuarioController {
     }
 
     static async register(req, res) {
+        const { nome, email, senha } = req
         try {
-            await testConnection();
-            const { nome, email, senha } = req.body
+           // await testConnection();
+           console.log(req)
             const { salt, hashPassword } = hashearSenha(senha);
             const usuario = await db.Usuario.create({ 
                 nome, 
