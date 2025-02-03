@@ -7,7 +7,9 @@ function hashearSenha(password) {
     
     const hashPassword = scryptSync(password, salt, 64).toString('hex');
 
+    //nsole.log(salt, hashPassword)
+
     return { salt, hashPassword };
 }
 
-module.exports = hashearSenha;
+module.exports = {hashearSenha}

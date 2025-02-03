@@ -1,4 +1,4 @@
-import { registerRequest } from "../functions/cadastroFuncs/registerRequest.js";
+import { userRegister } from "../functions/cadastroFuncs/userRegister.js";
 const form = document.getElementById("form");
 const inputNome = document.getElementById("nome")
 const inputEmail = document.getElementById("email")
@@ -13,5 +13,5 @@ form.addEventListener("submit", () => {
 
     console.log(nome, email, senha)
 
-    registerRequest({nome, email, senha})
+    userRegister({nome, email, senha})
 })

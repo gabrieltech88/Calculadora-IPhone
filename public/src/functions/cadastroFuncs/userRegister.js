@@ -1,7 +1,7 @@
 
-export async function registerRequest(dto) {
+export async function userRegister(dto) {
     try {
-        await fetch("http://localhost:3000/usuarios", {
+        fetch("http://localhost:3000/usuarios", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
