@@ -1,0 +1,15 @@
+body{
+    #form {
+        .alert-sucess {
+            width: 308px;
+            background-color: #74ff73;
+            color: #000;
+        }
+        
+        .alert-negative {
+            @extend .alert-sucess;
+            background-color: #ff6961;
+        }
+    }
+
+}

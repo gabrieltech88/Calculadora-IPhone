@@ -29,7 +29,7 @@ class UsuarioController {
                 return res.status(409).send({ message: "Usuário já cadastrado"})
             }
         //  console.log(nome, email, senha)
-            const { salt, hashPassword } = hashearSenha(senha);
+            const { salt, hashPassword } = await hashearSenha(senha);
          // console.log(salt, hashPassword)
             const newUser = await db.Usuario.create({ 
                 nome, 
@@ -38,7 +38,7 @@ class UsuarioController {
                 salt
             })
 
-            return res.status(201).send(newUser);
+            return res.status(201).send({ message: `Usuário ${nome} cadastrado com sucesso`});
         } catch(error) {
             console.log(error)
             return res.status(500).json({ message: "Erro ao realizar registro"});

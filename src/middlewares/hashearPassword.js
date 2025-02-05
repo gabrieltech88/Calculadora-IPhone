@@ -1,7 +1,7 @@
 const { scryptSync, randomBytes } = require('crypto'); 
 
 
-function hashearSenha(password) {
+async function hashearSenha(password) {
     const salt = randomBytes(16).toString('hex');
 
     
