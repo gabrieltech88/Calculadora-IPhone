@@ -46,7 +46,7 @@ class UsuarioController {
     }
 
     static async login(req, res) {
-        const { email, password } = req.body
+        const { email, senha } = req.body
 
         try {
             const user = await db.Usuario.findAll({
@@ -55,13 +55,17 @@ class UsuarioController {
                 }
             })
 
+            if(!user) {
+                return res.status(404).send({ message: "Usuário ou senha inválidos"})
+            }
+
             console.log(user)
 
             const salt = user[0].salt
-            console.log(salt)
-
-            const loginPassword = await scryptSync(password, salt, 64).toString('hex')
-            console.log(loginPassword)
+            //console.log(salt)
+            const loginPassword = scryptSync(senha, salt, 64).toString('hex')
+            //console.log(`Senha atual: ${loginPassword}`)
+            //console.log(`Senha do Usuário: ${user[0].senha}`)
 
             if(loginPassword == user[0].senha) {
                 return res.status(200).send({message: "Login efetuado com sucesso"})
@@ -69,6 +73,10 @@ class UsuarioController {
         }catch(err) {
             res.status(500).send("Usuário ou senha inválida")
         }
+    }
+
+    static async logout(req, res) {
+        return res.status(200).send({ message: "Usuário desconectado com sucesso!"})
     }
 }
 

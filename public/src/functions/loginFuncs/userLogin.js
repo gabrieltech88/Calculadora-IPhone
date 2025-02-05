@@ -1,6 +1,6 @@
 export async function userLogin(dto) {
     try {
-        const response = await fetch("http://localhost:3000/usuarios/login", {
+        const response = await fetch("http://localhost:3000/auth", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -12,7 +12,7 @@ export async function userLogin(dto) {
         })
 
         if(response.ok) {
-            window.location.replace('http://localhost:5500/public/pages/index.html')
+            window.location.replace('http://127.0.0.1:5500/public/index.html')
         }
 
 
