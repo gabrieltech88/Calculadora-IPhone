@@ -14,22 +14,28 @@ form.addEventListener("submit", async () => {
     console.log(nome, email, senha)
 
     const request = await userRegister({nome, email, senha})
-    console.log(request)
+    //console.log(request)
 
     const alert = document.createElement("div")
     form.appendChild(alert)
+    const text = document.createElement("p")
+    alert.appendChild(text)
+    
+    //console.log(request)
 
     if(request.ok) {
         alert.classList.add("alert-sucess")
-        alert.innerText = "Cadastro Realizado com sucesso";
+        text.innerText = "Cadastro Realizado com sucesso!";
     } else {
         alert.classList.add("alert-negative");
-        alert.innerText = "Cadastro falhou em ser efetuado";
+        text.innerText = "Cadastro falhou em ser efetuado";
     }
-    console.log(alert)
-    console.log(alert.classList.contains('alert-sucess'))
-    console.log(alert.classList.contains('alert-negative'))
-
+    //console.log(alert)
+    //console.log(alert.classList.contains('alert-sucess'))
+    //console.log(alert.classList.contains('alert-negative'))
+    setTimeout(() => {
+        alert.remove();
+    }, 2000)
     inputNome.value = "";
     inputEmail.value = "";
     inputSenha.value = "";

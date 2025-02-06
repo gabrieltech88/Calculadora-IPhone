@@ -113,9 +113,12 @@ body a {
 }
 
 body #form .alert-sucess, body #form .alert-negative {
+  display: flex;
   width: 308px;
   background-color: #74ff73;
   color: #000;
+  text-align: center;
+  height: 25px;
 }
 body #form .alert-negative {
   background-color: #ff6961;

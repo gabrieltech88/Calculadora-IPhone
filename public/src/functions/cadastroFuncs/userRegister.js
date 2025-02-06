@@ -15,7 +15,9 @@ export async function userRegister(dto) {
 
         if(response.ok) {
             return response
-        } 
+        } else {
+            return new Error("Erro ao tentar enviar requisição")
+        }
     } catch(err) {
         throw new Error('Algo deu errado!')
     }
