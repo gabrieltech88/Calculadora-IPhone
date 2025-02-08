@@ -16,6 +16,7 @@ body{
         .alert-negative {
             @extend .alert-sucess;
             background-color: #ff6961;
+            border: 3px solid #ca0202;
         }
     }
 

@@ -14,10 +14,11 @@ export async function userRegister(dto) {
         })
 
         if(response.ok) {
-            return response
-        } else {
-            return new Error("Erro ao tentar enviar requisição")
-        }
+            return true
+        } 
+            
+        return false
+        
     } catch(err) {
         throw new Error('Algo deu errado!')
     }
