@@ -1,7 +1,7 @@
 
 export async function userRegister(dto) {
     try {
-        fetch("http://localhost:3000/usuarios", {
+        const response = await fetch("http://localhost:3000/usuarios", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -12,6 +12,12 @@ export async function userRegister(dto) {
                 senha: dto.senha
             })
         })
+
+        if(response.ok) {
+            return response
+        } else {
+            return new Error("Erro ao tentar enviar requisição")
+        }
     } catch(err) {
         throw new Error('Algo deu errado!')
     }

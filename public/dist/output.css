@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -60,97 +59,100 @@ body {
 }
 
 body {
-  box-sizing: border-box;
-  height: 100vh;
   background-color: #000;
-  display: flex;
-  justify-content: center;
-}
-
-main {
+  color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: center;
+  margin: 80px 0;
+  gap: 56px;
 }
-
-#div-titulo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 50px;
-}
-#div-titulo #container-titulo {
-  margin: 0 0;
-  white-space: nowrap;
-  text-align: center;
-  justify-content: center;
-}
-#div-titulo #container-titulo h1 {
-  margin-left: 5%;
-  color: #fff;
+body h1 {
+  color: #FF9F0A;
   font-size: 50px;
   font-family: "Krona One", serif;
+  text-align: center;
 }
-#div-titulo #container-titulo h1 span {
-  color: #FF9F0A;
-}
-
-#logout {
-  margin-left: 30%;
-  border: 2px solid #FF9F0A;
-  background-color: transparent;
-  color: #FF9F0A;
-  font-family: "Oswald", serif;
-  font-weight: 500;
-  border-radius: 4px;
-  padding: 4px 16px;
-  transition: background-color 0.3s, color 0.3s, padding 0.3s;
-  /* Tamanho fixo para evitar mudanças durante o hover */
-  width: 80px; /* Ajuste conforme necessário */
-  height: 40px; /* Ajuste conforme necessário */
-}
-#logout:hover {
-  background-color: #FF9F0A;
-  color: #fff;
-  padding: 8px 14px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-}
-
-#container-saida {
+body #form {
   display: flex;
-  height: 55px;
-  width: 450px;
-  background-color: #fff;
-  border-radius: 36px;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
 }
-#container-saida #saida {
-  padding-left: 12px;
-  font-size: 12px;
-  color: #5C5C5F;
+body #form .container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-
-.item-tabela {
+body #form input {
+  background-color: transparent;
+  border: 3px solid #FF9F0A;
+  width: 280px;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+}
+body #form input:focus {
+  outline: none;
+}
+body #form label {
+  font-family: "Oswald", serif;
+}
+body #form button {
+  color: #fff;
+  border: 3px solid #FF9F0A;
+  width: 308px;
+  background-color: #FF9F0A;
+  border-radius: 4px;
   padding: 5px;
 }
-.item-tabela .btn, .item-tabela .btn-numero, .item-tabela .btn-op-esp, .item-tabela .btn-op {
-  background-color: #2A2A2C;
+body a {
+  text-decoration: none;
+  color: #5C5C5F;
+  text-align: center;
+  font-family: "Oswald", serif;
+}
+
+body #form .alert-sucess, body #form .alert-negative {
+  display: flex;
+  width: 308px;
+  background-color: #74ff73;
+  color: #000;
+  text-align: center;
+  height: 25px;
+}
+body #form .alert-negative {
+  background-color: #ff6961;
+}
+
+#input-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+#input-box .input-login {
+  background-color: transparent;
+  border: 3px solid #FF9F0A;
+  width: 280px;
+  border-radius: 4px;
+  padding: 8px;
   color: #fff;
-  border: none;
-  font-size: 16px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
 }
-.item-tabela .btn-op {
+#input-box #input-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#input-box #input-input p {
+  font-family: "Oswald", serif;
+}
+#input-box #button {
+  color: #fff;
+  border: 3px solid #FF9F0A;
+  width: 305px;
   background-color: #FF9F0A;
-}
-.item-tabela .btn-op-esp {
-  background-color: #5C5C5F;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=output.css.map */

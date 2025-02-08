@@ -106,10 +106,26 @@ body #form button {
   padding: 5px;
 }
 body a {
+  justify-content: center;
   text-decoration: none;
   color: #5C5C5F;
   text-align: center;
   font-family: "Oswald", serif;
+}
+
+body #form .alert-sucess, body #form .alert-negative {
+  display: flex;
+  width: 300px;
+  background-color: #86db87;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  border: 3px solid #03990a;
+  border-radius: 3px;
+}
+body #form .alert-negative {
+  background-color: #ff6961;
 }
 
 #input-box {
