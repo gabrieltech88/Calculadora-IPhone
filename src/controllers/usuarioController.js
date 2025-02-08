@@ -55,11 +55,12 @@ class UsuarioController {
                 }
             })
 
+           // console.log(user)
             if(!user) {
                 return res.status(404).send({ message: "Usuário ou senha inválidos"})
             }
 
-            console.log(user)
+            //console.log(user)
 
             const salt = user[0].salt
             //console.log(salt)
@@ -67,7 +68,7 @@ class UsuarioController {
             //console.log(`Senha atual: ${loginPassword}`)
             //console.log(`Senha do Usuário: ${user[0].senha}`)
 
-            if(loginPassword == user[0].senha) {
+            if(loginPassword === user[0].senha) {
                 return res.status(200).send({message: "Login efetuado com sucesso"})
             }
         }catch(err) {

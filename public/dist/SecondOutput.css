@@ -126,37 +126,7 @@ body #form .alert-sucess, body #form .alert-negative {
 }
 body #form .alert-negative {
   background-color: #ff6961;
-}
-
-#input-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-}
-#input-box .input-login {
-  background-color: transparent;
-  border: 3px solid #FF9F0A;
-  width: 280px;
-  border-radius: 4px;
-  padding: 8px;
-  color: #fff;
-}
-#input-box #input-input {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-#input-box #input-input p {
-  font-family: "Oswald", serif;
-}
-#input-box #button {
-  color: #fff;
-  border: 3px solid #FF9F0A;
-  width: 305px;
-  background-color: #FF9F0A;
-  border-radius: 4px;
-  padding: 5px;
+  border: 3px solid #ca0202;
 }
 
 /*# sourceMappingURL=SecondOutput.css.map */

@@ -13,9 +13,11 @@ export async function userLogin(dto) {
 
         if(response.ok) {
             window.location.replace('http://127.0.0.1:5500/public/index.html')
+        } else if(response.status === 404 || response.status === 500) {
+            return false;
         }
-
-
+        
+       
     } catch(err) {
         throw new Error('Login Inválido')
     }
