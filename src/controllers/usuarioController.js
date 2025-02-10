@@ -38,7 +38,8 @@ class UsuarioController {
                 salt
             })
 
-            return res.status(201).send({ message: `Usuário ${nome} cadastrado com sucesso`});
+            
+            res.redirect(201, '/')
         } catch(error) {
             console.log(error)
             return res.status(500).json({ message: "Erro ao realizar registro"});
@@ -69,7 +70,7 @@ class UsuarioController {
             //console.log(`Senha do Usuário: ${user[0].senha}`)
 
             if(loginPassword === user[0].senha) {
-                return res.status(200).send({message: "Login efetuado com sucesso"})
+                return res.redirect(200, '/calculadora')
             }
         }catch(err) {
             res.status(500).send("Usuário ou senha inválida")
@@ -77,7 +78,7 @@ class UsuarioController {
     }
 
     static async logout(req, res) {
-        return res.status(200).send({ message: "Usuário desconectado com sucesso!"})
+        return res.redirect(200, '/')
     }
 }
 
