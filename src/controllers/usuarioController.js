@@ -78,7 +78,12 @@ class UsuarioController {
     }
 
     static async logout(req, res) {
-        return res.redirect(200, '/')
+        try {
+            console.log(req)
+            return res.status(200).send({message: "Logout realizado!"})
+        } catch(err) {
+            return res.status(500).send({message: "Houve algum erro no momento do direcionamento"})
+        }
     }
 }
 

@@ -3,98 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/output.css">
-    <title>Calculadora IPhone</title>
+    <link rel="stylesheet" href="../dist/SecondOutput.css">
+    <title>Login Calculadora</title>
 </head>
 <body>
-    <main>
-        <div id="div-titulo">
-            <div id="container-titulo">
-                <h1>Calculadora <span>IP</span>hone</h1>
-            </div>
-            <button id="logout">Logout</button>
+    <h1>
+        Login
+    </h1>
+    <form id="form" action="/auth" method="POST">
+        <div id="container-form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+                
+            <label for="senha">Password:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
-        <br>
-        <div id="container-saida">
-            <output id="saida">
-                Resultado
-            </output>
-        </div>
-        <table id="tabela-numEOp">
-            <tr class="linha-tabela">
-                <td class="item-tabela">
-                    <button id="ac" class="btn-op-esp">AC</button>
-                </td>
-                <td class="item-tabela">
-                   <button class="btn-op-esp btn">%</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op-esp btn">()</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op btn" value="/">/</button>
-                </td>
-            </tr>
-            <tr class="linha-tabela">
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="7">7</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="8">8</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="9">9</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op btn" value="*">x</button>
-                </td>
-            </tr>
-            <tr class="linha-tabela">
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="4">4</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="5">5</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="6">6</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op btn" value="-">-</button>
-                </td>
-            </tr>
-            <tr class="linha-tabela">
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="1">1</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="2">2</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="3">3</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op btn" value="+">+</button>
-                </td>
-            </tr>
-            <tr class="linha-tabela">
-                <td class="item-tabela">
-                    <button id="del" class="btn-numero">DEL</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value="0">0</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-numero btn" value=".">,</button>
-                </td>
-                <td class="item-tabela">
-                    <button class="btn-op btn" value="=">=</button>
-                </td>
-           </tr>
-        </table>
-    </main>
-
-    <script src="./src/script.js" type="module"></script>
-    <script type="module" src="./src/login/logoutRequest.js"></script>
+        
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <a href="http://localhost:3000/signup">Se você ainda não possui um cadastro, clique nesse link para realizar o seu cadastro</a>
 </body>
 </html>

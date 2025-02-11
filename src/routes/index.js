@@ -6,7 +6,7 @@ const cors = require('cors')
 const path = require('path')
 
 module.exports = app => {
-	app.use(express.static(path.join(__dirname, '../../public/pages')))
+	app.use(express.static(path.join(__dirname, '../../public')))
 	app.use(cors());
 	app.use(express.json(), usuarios, auth, pages);
 }
