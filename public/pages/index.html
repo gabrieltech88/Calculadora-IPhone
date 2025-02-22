@@ -10,19 +10,17 @@
     <h1>
         Login
     </h1>
-    <form id="form">
-        <div class="container-form">
+    <form id="form" action="/auth" method="POST">
+        <div id="container-form">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
-            
+                
             <label for="senha">Password:</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
         
         <button id="submit" type="submit">Submit</button>
     </form>
-    <a href="./cadastro.html">Se você ainda não possui um cadastro, clique nesse link para realizar o seu cadastro</a>
-
-    <script type="module" src="../src/login/sendRequest.js"></script>
+    <a href="http://localhost:3000/signup">Se você ainda não possui um cadastro, clique nesse link para realizar o seu cadastro</a>
 </body>
 </html>

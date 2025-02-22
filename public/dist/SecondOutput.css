@@ -78,7 +78,7 @@ body #form {
   gap: 20px;
   align-items: center;
 }
-body #form .container-form {
+body #form #container-form {
   display: flex;
   flex-direction: column;
   gap: 8px;

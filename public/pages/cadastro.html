@@ -9,21 +9,20 @@
 <body>
     
     <h1>Cadastro de Usuário</h1>
-    <form id="form">
-        <div class="container-form">
+    <form id="form" action="/usuarios" method="POST">
+        <div id="container-form">
             <label for="nome">Name:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
             
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
-            
+                
             <label for="senha">Password:</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
         
         <button id="submit" type="submit">Submit</button>
     </form>
-    <a href="./login.html">Se você já possui um cadastro, clique aqui</a>
-    <script type="module" src="../src/cadastro/sendRequest.js" ></script>
+    <a href="http://localhost:3000">Se você já possui um cadastro, clique aqui</a>
 </body>
 </html>
