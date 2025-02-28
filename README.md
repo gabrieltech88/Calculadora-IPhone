@@ -38,9 +38,11 @@ Clone o repositório para a sua máquina local:
 ```bash
 git clone https://github.com/gabrieltech88/calculadora-iphone.git
 cd calculadora-iphone
+```
 
 ### Passo 2: Instalar Dependências
 
 Instale as dependências do projeto
 ```bash
 npm install
+```
