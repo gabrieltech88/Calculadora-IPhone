@@ -46,3 +46,24 @@ Instale as dependências do projeto
 ```bash
 npm install
 ```
+
+### Passo 3: Instalar MySql
+
+Instalar o MySql para persistir dados
+```bash
+#Para Linux
+sudo apt-install mysql-server
+#Para macOS
+brew install mysql
+```
+
+### Passo 4: Configurar MySql
+
+Instalar o MySql para persistir dados
+```bash
+mysql -u root
+#Caso não consiga, de o seguinte comando, com a senha que você usa para acessar o seu sistema operacional
+mysql -u root -p
+#Após acessar, criar o banco de dados
+mysql > CREATE DATABASE calculadora_iphone;
+````
