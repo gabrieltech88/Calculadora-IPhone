@@ -59,7 +59,7 @@ brew install mysql
 
 ### Passo 4: Configurar MySql
 
-Instalar o MySql para persistir dados
+Configurar o MySql para persistir dados
 ```bash
 mysql -u root
 #Caso não consiga, de o seguinte comando, com a senha que você usa para acessar o seu sistema operacional
@@ -67,3 +67,10 @@ mysql -u root -p
 #Após acessar, criar o banco de dados
 mysql > CREATE DATABASE calculadora_iphone;
 ````
+
+### Passo 5: Rodar Aplicação
+
+Rodar aplicação na sua máquina local
+```bash
+npm run dev
+```
