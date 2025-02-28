@@ -1,6 +1,7 @@
 const db = require('../db/models');
 const { scryptSync } = require('crypto')
 const { hashearSenha } = require('../middlewares/hashearPassword')
+const { createJwt } = require('../middlewares/autorizacao')
 
 class UsuarioController {
     static async get(req, res) {
@@ -15,7 +16,6 @@ class UsuarioController {
     }
 
     static async register(req, res) {
-        console.log(req.body)
         const { nome, email, senha } = req.body
 
         try {
@@ -24,6 +24,7 @@ class UsuarioController {
                     email: email,
                 }
             })
+            console.log(user)
 
             if(user && user.length > 0) {
                 return res.status(409).send({ message: "Usuário já cadastrado"})
@@ -38,8 +39,7 @@ class UsuarioController {
                 salt
             })
 
-            
-            res.redirect(201, '/')
+            return res.redirect('/')
         } catch(error) {
             console.log(error)
             return res.status(500).json({ message: "Erro ao realizar registro"});
@@ -69,8 +69,17 @@ class UsuarioController {
             //console.log(`Senha atual: ${loginPassword}`)
             //console.log(`Senha do Usuário: ${user[0].senha}`)
 
+            const accessToken = await createJwt(email, senha)
+
             if(loginPassword === user[0].senha) {
-                return res.redirect(200, '/calculadora')
+                res.cookie('token', accessToken, {
+                    httpOnly: true,
+                    path: '/',
+                    sameSite: 'Strict',
+                    maxAge: 604800000
+                })
+                
+                return res.redirect('/calculadora')
             }
         }catch(err) {
             res.status(500).send("Usuário ou senha inválida")
